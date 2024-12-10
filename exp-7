@@ -1,0 +1,91 @@
+low:
+
+
+#include <stdio.h>
+
+int main() {
+    float num1, num2, result;
+    float *ptr1, *ptr2, *ptrResult;
+
+    
+    printf("Enter the two numbers: ");
+    scanf("%f %f", &num1, &num2);
+
+    
+    ptr1 = &num1;
+    ptr2 = &num2;
+    ptrResult = &result;
+
+    
+    *ptrResult = *ptr1 + *ptr2;
+
+
+    printf("%.2f + %.2f = %.2f\n", *ptr1, *ptr2, *ptrResult);
+
+    return 0;
+}
+===============================================================================================================================================================================================================
+medium:
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    int *ptr = &num;  
+
+
+    
+    scanf("%d", ptr);  
+
+
+    if (*ptr > 0) {
+        printf("The number is positive\n");
+    } else if (*ptr < 0) {
+        printf("The number is negative\n");
+    } else {
+        printf("The number is zero\n");
+    }
+
+    return 0;
+}
+
+===================================================================================================================================================================================================================
+high:
+
+
+
+#include <stdio.h>
+void reverseString(char* str) {
+char* start = str;
+char* end = str;
+
+while (*end != '\0') {
+end++;
+}
+end--;
+while (start < end) {
+char temp = *start;
+*start = *end;
+*end = temp;
+start++;
+end--;
+}
+}
+int main() {
+char str[100];
+printf("Enter a string : ");
+scanf("%s", str);
+reverseString(str);
+printf("Reverse of the string : %s\n", str);
+return 0;
+}
+
+========================================================================================================================================================================================================
+
+
+
+
+
